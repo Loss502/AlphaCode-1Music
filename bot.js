@@ -342,5 +342,13 @@ client.on('message', message => {
     }
 });
 
+
+
+
+if(message.guild.me.voiceChannel && message.guild.member(message.author).voiceChannel.id !==
+ message.guild.me.voiceChannel.id) return message.channel.send("يجب ان تكون بنفس روم البوت");
+
+
+
 client.login(process.env.BOT_TOKEN);
 
